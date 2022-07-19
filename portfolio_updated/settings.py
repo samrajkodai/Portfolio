@@ -35,21 +35,39 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+   
+
+    # Add the following django-allauth apps
     'portfolioapp',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.facebook',
-    
+    'allauth.socialaccount.providers.google', # for Google OAuth 2.0
+    # ...
 ]
+
+# INSTALLED_APPS = [
+#     'django.contrib.sites',
+#     'django.contrib.admin',
+#     'django.contrib.auth',
+#     'django.contrib.contenttypes',
+#     'django.contrib.sessions',
+#     'django.contrib.messages',
+#     'django.contrib.staticfiles',
+#     'portfolioapp',
+#     'allauth',
+#     'allauth.account',
+#     'allauth.socialaccount',
+#     'allauth.socialaccount.providers.google',
+#     'allauth.socialaccount.providers.facebook',
+    
+# ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -109,9 +127,7 @@ if DEBUG:
     EMAIL_BACKEND='django.core.mail.backends.dummy.EmailBackend'
 # EMIAL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
-SITE_ID = 5
-
-
+SITE_ID = 2
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
