@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
+    
 ]
 
 MIDDLEWARE = [
@@ -107,7 +109,7 @@ if DEBUG:
     EMAIL_BACKEND='django.core.mail.backends.dummy.EmailBackend'
 # EMIAL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
-SITE_ID = 1
+SITE_ID = 5
 
 
 
