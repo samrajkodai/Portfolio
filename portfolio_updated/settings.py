@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-   
+    'django.contrib.sites', # Add this
 
     # Add the following django-allauth apps
     'portfolioapp',
@@ -127,7 +127,7 @@ if DEBUG:
     EMAIL_BACKEND='django.core.mail.backends.dummy.EmailBackend'
 # EMIAL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
-SITE_ID = 2
+SITE_ID = 1
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
