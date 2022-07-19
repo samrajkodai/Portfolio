@@ -1,3 +1,4 @@
 django
 django-allauth
 gunicorn
+django_heroku
