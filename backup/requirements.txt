@@ -1,5 +1,0 @@
-django
-django-allauth
-gunicorn
-django_heroku
-dj-database-url 
