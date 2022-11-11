@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-0ti_%su$g^=4d7-^rbsg_9$rqk=l^3g2)n#7lde&mvy5i1+3xb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -111,6 +111,10 @@ DATABASES = {
 }
 
 import dj_database_url
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
+
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
